@@ -1,0 +1,27 @@
+<% layout('layout/boilerplate') %>
+    <main class="container">
+        <h1>All students of <%= students.branch%> branch</h1>
+        <div class="col">
+            <% for(let student of students.allstudents){ %>
+                <div class="card row mt-3">
+                    <h2>
+                        Name: <%= student.Name %>
+                    </h2>
+                    <h4>
+                       PRN: <%= student.Prn %>
+                    </h4>
+                    <h4>
+                        Year: <%= student.Year %>
+                    </h4>
+                    <h4>
+                       Marks: <%= student.Marks %>
+                    </h4>
+                    <form action="/edit/<%=  %> "></form>
+                    <button class='btn btn-primary'>Edit</button>
+                </form>
+                <form action="/delete"></form>
+                    <button class='btn btn-danger'>Delete</button>
+                </form>
+                </div>
+                <% }%>
+        </div>

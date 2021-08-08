@@ -1,0 +1,17 @@
+<% layout('layout/boilerplate') %>
+    <main class='container'>
+        <div class="col">
+            <form action="/selectbranch/branch" class='card mt-3' method="post">
+                <h1> SELECT BRANCH</h1>
+                <div class="container mb-3 row ">
+                    <label for="branch">Branch</label>
+                    <select name="Branch" id="branch">
+                        <option value="CSE" selected>CSE </option>
+                        <option value="IT" selected>IT</option>
+                        <option value="MECH" selected>MECH</option>
+                        <option value="CIVIL" selected>CIVIL</option>
+                        <option value="ELEC." selected>ELEC.</option>
+                    </select>
+                <button class="btn btn-outline-primary mt-3">Continue</button>
+            </form>
+        </div>

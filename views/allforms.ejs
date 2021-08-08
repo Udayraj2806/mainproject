@@ -1,0 +1,21 @@
+<% layout('layout/boilerplate') %>
+    <main class="container">
+        <h1>STUDENTS</h1>
+        <div class="col">
+            <div class="card">
+                <% for(let i of allform){ %>
+                    <ul>
+                        <li class="row">
+                            <h1>
+                                <%= i.Name %>
+                            </h1>
+                        </li>
+                        <a href="/edit/<%= i.id %>" class="btn btn-warning">Edit</a>
+                        <a href="/delete/<%=i._id %>" class="btn btn-danger">Delete</a>
+                        <a href="/show/<%= i._id %> " class="btn btn-info">Details</a>
+                        <br>
+                        <br>
+                    </ul>
+                    <% } %>
+            </div>
+        </div>

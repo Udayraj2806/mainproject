@@ -1,0 +1,35 @@
+<% layout('layout/boilerplate') %> 
+<main class="container">
+    <h1>EDIT</h1>
+    <div class="col">
+    <form action="/editstudent/<%= member.id%>?_method=PUT" class="card" method="post">
+
+
+        <div class="container mb-3 row">
+        <label for="Prn">Prn</label>
+    
+            <input type="number" placeholder="eg.67" name="Prn" value=<%=member.Prn %>  >
+        </div>
+
+
+        <div class="container mb-3 row">
+        <label for="Name">Name</label>
+            <input type="text" placeholder="Amadeous" name="Name" value="<%=member.Name %> ">
+        </div>
+
+
+        <div class="container mb-3 row">
+        <label for="Year">Year</label>
+            <input type="text" placeholder="3rd" name="Year" value="<%=member.Year %> "> 
+        </div>
+
+
+        <div class="container mb-3 row">
+        <label for="Marks">Marks</label>
+            <input type="number" placeholder="eg.8" name="Marks" value=<%=member.Marks %> >
+        </div>
+
+    <button class="btn btn-info">Edit</button>
+</form>
+</div>
+
